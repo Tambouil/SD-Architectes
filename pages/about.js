@@ -1,8 +1,10 @@
 import React from "react";
+import NavBar from "../components/NavBar";
 
 const about = () => {
   return (
     <div>
+      <NavBar />
       <h1>Agence</h1>
     </div>
   );
