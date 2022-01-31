@@ -7,6 +7,7 @@
   position: sticky;
   top: 0;
   z-index: 20;
+  padding: 0 2rem;
 }
 
 .nav-container {
@@ -16,12 +17,6 @@
   width: 100%;
   height: 80px;
   max-width: 1440px;
-}
-
-.nav-logo {
-  align-items: center;
-  margin-left: 20px;
-  cursor: pointer;
 }
 
 .nav-menu {
@@ -64,23 +59,23 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    border-top: 1pxsolid #fff;
+    border-top: 1px solid #fff;
     position: absolute;
-    top: 80px;
+    top: 70px;
     left: -110%;
     opacity: 1;
     transition: all 0.5s ease;
   }
 
   .nav-menu.active {
-    background: #1f5156;
+    background: var(--blue);
     left: 0px;
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 1;
   }
   .nav-item .active {
-    color: #ffdd40;
+    color: var(--green);
     border: none;
   }
   .nav-links {
@@ -90,13 +85,10 @@
   }
 
   .nav-icon {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 60%);
-    font-size: 1.8rem;
-    cursor: pointer;
-    color: #ffdd40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    font-size: 25px;
   }
 }
