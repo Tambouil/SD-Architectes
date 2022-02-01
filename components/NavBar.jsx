@@ -20,7 +20,7 @@ function NavBar() {
       <nav className="navbar">
         <div className="nav-container">
           <Link href="/" className="nav-logo">
-            <Image src="/logo.png" alt="SDA Logo" width={60} height={30} />
+            <Image src="/logo.png" alt="SDA Logo" width={80} height={40} />
           </Link>
 
           <ul className={click ? "nav-menu active" : "nav-menu"}>
