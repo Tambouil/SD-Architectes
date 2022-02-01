@@ -41,7 +41,7 @@ function NavBar() {
                 </a>
               </Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item dropdown">
               <Link href="/about" passHref className="nav-links">
                 <a className={router.pathname == "/about" ? "active" : ""}>
                   Agence
@@ -50,6 +50,15 @@ function NavBar() {
                   </IconContext.Provider>
                 </a>
               </Link>
+              <div className="dropdown-menu last">
+                <Link href="#">
+                  <a className="dropdown-item">Notre équipe</a>
+                </Link>
+
+                <Link href="#">
+                  <a className="dropdown-item">Nos clients</a>
+                </Link>
+              </div>
             </li>
             <li className="nav-item">
               <a
