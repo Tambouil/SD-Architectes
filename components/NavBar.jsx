@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import { FaTimes } from "react-icons/fa";
 import { FaBars } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa";
+import Dropdown from "./Dropdown";
 
 function NavBar() {
   const [click, setClick] = useState(false);
@@ -50,15 +51,7 @@ function NavBar() {
                   </IconContext.Provider>
                 </a>
               </Link>
-              <div className="dropdown-menu last">
-                <Link href="#">
-                  <a className="dropdown-item">Notre équipe</a>
-                </Link>
-
-                <Link href="#">
-                  <a className="dropdown-item">Nos clients</a>
-                </Link>
-              </div>
+              <Dropdown />
             </li>
             <li className="nav-item">
               <a

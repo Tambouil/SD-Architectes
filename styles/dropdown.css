@@ -1,0 +1,106 @@
+.dropdown {
+  position: relative;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+.dropdown .nav-link {
+  cursor: pointer;
+}
+.dropdown .nav-link i {
+  padding-left: 1px;
+  font-size: 9px;
+}
+.dropdown-item {
+  position: relative;
+}
+.dropdown-item:hover .sub-menu {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+.dropdown-item span {
+  display: block;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: -30%;
+  z-index: 1000;
+  display: none;
+  text-align: left;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(20px);
+  transform: translateY(20px);
+  width: 200px;
+  padding: 15px 10px;
+  border-radius: 0;
+  border: 0;
+  background-color: #262d3c;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.25rem 1.5rem;
+  clear: both;
+  font-weight: 400;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+
+.dropdown-menu .dropdown-item {
+  padding: 5px 15px;
+  font-size: 15px;
+  font-weight: 300;
+  color: #fff;
+  position: relative;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.025);
+  background-color: transparent;
+}
+.dropdown-menu .dropdown-item:last-child {
+  border-bottom: none;
+}
+.dropdown-menu .dropdown-item:hover {
+  background: transparent;
+  padding-left: 20px;
+  color: #cdddac;
+}
+.dropdown-menu .dropdown-item a {
+  display: block;
+}
+
+@media screen and (max-width: 960px) {
+  .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    width: 100%;
+    display: none;
+    position: static;
+    float: none;
+  }
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    left: 0;
+  }
+  .dropdown-menu .dropdown-item {
+    color: #999;
+  }
+}
