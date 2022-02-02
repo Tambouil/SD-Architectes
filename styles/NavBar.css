@@ -18,6 +18,10 @@
   margin-left: 2rem;
 }
 
+.logo {
+  cursor: pointer;
+}
+
 .nav-menu {
   display: flex;
   list-style: none;

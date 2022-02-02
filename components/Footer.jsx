@@ -26,7 +26,7 @@ const Footer = () => {
                   <a href="tel:0546995913">05 46 99 59 13</a>
                 </li>
                 <li>
-                  <a href="mailto:agence@sdarchitectes.fr">
+                  <a href="mailto:agence@sdarchitectes.fr" target="_blank">
                     agence@sdarchitectes.fr
                   </a>
                 </li>
@@ -38,10 +38,7 @@ const Footer = () => {
                 <li>
                   <a href="/legal-notice">Mentions légales</a>
                 </li>
-                <li>
-                  © <script>document.write(new Date().getFullYear())</script> SD
-                  Architectes
-                </li>
+                <li>© {new Date().getFullYear()} SD Architectes</li>
               </ul>
             </div>
           </div>

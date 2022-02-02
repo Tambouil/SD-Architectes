@@ -29,6 +29,7 @@ function NavBar() {
               alt="SDA Logo"
               width={80}
               height={40}
+              className="logo"
             />
           </Link>
 
