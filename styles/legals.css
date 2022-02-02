@@ -1,0 +1,39 @@
+.notice-background {
+  width: 100%;
+  background-color: #f0f0f0;
+  padding-bottom: 2rem;
+}
+
+.legal-wrapper {
+  max-width: 1440px;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 15px;
+  padding-left: 30px;
+  background-color: #f0f0f0;
+}
+.legal-wrapper h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #15161a;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 55px;
+}
+.sub-title {
+  text-transform: uppercase;
+  color: #15161a;
+  font-weight: 400;
+  border-bottom: 1px solid rgb(206, 202, 197, 0.5);
+  padding-bottom: 0.5rem;
+  margin: 1.5rem 0;
+  font-size: 35px;
+}
+.legal-wrapper ul {
+  padding: 0;
+}
+.legal-wrapper li,
+.legal-wrapper p {
+  color: #544239;
+  font-size: 18px;
+}

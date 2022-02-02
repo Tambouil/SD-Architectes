@@ -12,6 +12,9 @@ function NavBar() {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
+  const closeMenu = () => {
+    setClick(false);
+  };
 
   const router = useRouter();
 
@@ -19,14 +22,23 @@ function NavBar() {
     <>
       <nav className="navbar">
         <div className="nav-container">
-          <Link href="/" className="nav-logo">
-            <Image src="/logo.png" alt="SDA Logo" width={80} height={40} />
+          <Link href="/">
+            <Image
+              onClick={() => closeMenu()}
+              src="/img/logo/logo.png"
+              alt="SDA Logo"
+              width={80}
+              height={40}
+            />
           </Link>
 
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
               <Link href="/" passHref className="nav-links">
-                <a className={router.pathname == "/" ? "active" : ""}>
+                <a
+                  onClick={() => closeMenu()}
+                  className={router.pathname == "/" ? "active" : ""}
+                >
                   Accueil
                 </a>
               </Link>
@@ -34,6 +46,7 @@ function NavBar() {
             <li className="nav-item">
               <Link href="/projects-gallery" passHref className="nav-links">
                 <a
+                  onClick={() => closeMenu()}
                   className={
                     router.pathname == "/projects-gallery" ? "active" : ""
                   }
@@ -44,7 +57,10 @@ function NavBar() {
             </li>
             <li className="nav-item dropdown">
               <Link href="/about" passHref className="nav-links">
-                <a className={router.pathname == "/about" ? "active" : ""}>
+                <a
+                  onClick={() => closeMenu()}
+                  className={router.pathname == "/about" ? "active" : ""}
+                >
                   Agence
                   <IconContext.Provider value={{ className: "react-dropdown" }}>
                     <FaChevronDown />
@@ -55,6 +71,7 @@ function NavBar() {
             </li>
             <li className="nav-item">
               <a
+                onClick={() => closeMenu()}
                 target="_blank"
                 href="http://bap.sdarchitectes.com"
                 rel="noopener noreferrer"
@@ -64,7 +81,10 @@ function NavBar() {
             </li>
             <li className="nav-item">
               <Link href="/contact" passHref className="nav-links">
-                <a className={router.pathname == "/contact" ? "active" : ""}>
+                <a
+                  onClick={() => closeMenu()}
+                  className={router.pathname == "/contact" ? "active" : ""}
+                >
                   Contact
                 </a>
               </Link>

@@ -35,7 +35,7 @@
   padding: 25px 10px 15px 10px;
   border-radius: 0;
   border: 0;
-  background-color: #262d3c;
+  background-color: var(--blue);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -56,7 +56,7 @@
   padding: 5px 15px;
   font-size: 15px;
   font-weight: 300;
-  color: #fff;
+  color: var(--white);
   position: relative;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
@@ -69,14 +69,14 @@
 .dropdown-menu .dropdown-item:hover {
   background: transparent;
   padding-left: 20px;
-  color: #cdddac;
+  color: var(--green);
 }
 .dropdown-menu .dropdown-item a {
   display: block;
   font-size: 12px;
   text-transform: none;
   font-weight: 200;
-  color: #999;
+  color: var(--white);
 }
 .dropdown-menu .dropdown-item a:hover {
   color: var(--green);
@@ -99,6 +99,6 @@
     left: 0;
   }
   .dropdown-menu .dropdown-item {
-    color: #999;
+    color: var(--white);
   }
 }
