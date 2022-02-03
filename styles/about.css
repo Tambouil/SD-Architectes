@@ -13,7 +13,7 @@ main {
 .agency-wrapper {
   max-width: 1440px;
   margin: auto;
-  margin-top: 4rem;
+  margin-top: 1rem;
   padding: 2rem;
 }
 
@@ -22,7 +22,7 @@ main {
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   color: var(--black);
-  margin: 40px 0;
+  margin: 1rem 0;
   text-transform: uppercase;
   text-align: center;
 }
@@ -30,6 +30,7 @@ main {
 @media only screen and (max-width: 767px) {
   .agency-wrapper .title {
     margin-bottom: 30px;
+    font-size: 40px;
   }
 }
 
@@ -252,6 +253,8 @@ main {
   color: #ededdd;
   font-weight: 600;
   text-align: center;
+  font-size: 25px;
+  margin: 0;
 }
 .associate span {
   color: #eee9e9;
@@ -361,6 +364,8 @@ main {
   text-align: center;
   color: #ededdd;
   font-weight: 600;
+  font-size: 20px;
+  margin: 0;
 }
 
 .subteam span {

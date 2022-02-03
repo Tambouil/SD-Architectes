@@ -1,6 +1,6 @@
 import React from "react";
 
-const [slug] = () => {
+const slug = () => {
   return (
     <>
       <h1>Projects Details</h1>
@@ -8,4 +8,4 @@ const [slug] = () => {
   );
 };
 
-export default [slug];
+export default slug;

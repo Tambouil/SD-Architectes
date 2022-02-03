@@ -1,16 +1,14 @@
 import React from "react";
-import Image from "next/image";
-import CountUp from "react-countup";
 
 const about = () => {
   return (
     <div>
       <main>
-        <section class="agency">
-          <div class="agency-wrapper">
-            <h1 class="title">Agence SD Architectes</h1>
-            <div class="agency-content">
-              <h4 class="subtitle">
+        <section className="agency">
+          <div className="agency-wrapper">
+            <h1 className="title">Agence SD Architectes</h1>
+            <div className="agency-content">
+              <h4 className="subtitle">
                 Chez SD Architectes, chaque projet est considéré comme un
                 nouveau défi à relever. Depuis plus de 22 ans, nous mettons nos
                 savoir-faire, notre maîtrise technique et notre culture
@@ -33,26 +31,26 @@ const about = () => {
                 face aux besoins et contraintes des projets.
               </p>
             </div>
-            <div class="signature">
-              <h4 class="title-signature">Pascale Durand & Bruno Sourd</h4>
+            <div className="signature">
+              <h4 className="title-signature">Pascale Durand & Bruno Sourd</h4>
             </div>
-            <div class="agency-stats">
-              <div class="stat-1">
+            <div className="agency-stats">
+              <div className="stat-1">
                 <p>22 Années d'expériences</p>
               </div>
-              <div class="stat-2">
+              <div className="stat-2">
                 <p>+ de 700 Projets</p>
               </div>
-              <div class="stat-3">
+              <div className="stat-3">
                 <p>+ de 60 Clients</p>
               </div>
             </div>
           </div>
         </section>
 
-        <section class="environment">
-          <div class="environment-wrapper">
-            <h2 class="title">Environnement</h2>
+        <section className="environment">
+          <div className="environment-wrapper">
+            <h2 className="title">Environnement</h2>
             <p>
               Notre souci environnemental se concrétise par nos choix
               architecturaux et constructifs et s'enrichit de formations. Nous
@@ -72,19 +70,19 @@ const about = () => {
           </div>
         </section>
 
-        <section id="team" class="team-section">
-          <div class="team">
-            <h2 class="title">L'équipe</h2>
-            <div class="team-wrapper">
-              <div class="associates-wrapper">
-                <div class="associate associate-1">
-                  <div class="associate-header">
+        <section id="team" className="team-section">
+          <div className="team">
+            <h2 className="title">L'équipe</h2>
+            <div className="team-wrapper">
+              <div className="associates-wrapper">
+                <div className="associate associate-1">
+                  <div className="associate-header">
                     <img src="/img/ceo/bruno.jpg" alt="ceo image" />
                     <h5>
                       Bruno Sourd<span>Architecte DPLG</span>
                     </h5>
                   </div>
-                  <div class="content">
+                  <div className="content">
                     <p>
                       Diplômée de l'école d'architecture de Bordeaux en 1992.
                     </p>
@@ -102,14 +100,14 @@ const about = () => {
                     </ul>
                   </div>
                 </div>
-                <div class="associate associate-2">
-                  <div class="associate-header">
+                <div className="associate associate-2">
+                  <div className="associate-header">
                     <img src="/img/ceo/pascale.jpg" alt="ceo image" />
                     <h5>
                       Pascale Durand<span>Architecte DPLG</span>
                     </h5>
                   </div>
-                  <div class="content">
+                  <div className="content">
                     <p>
                       Diplômée de l'école d'architecture de Bordeaux en 1993.
                     </p>
@@ -141,28 +139,28 @@ const about = () => {
                 </div>
               </div>
             </div>
-            <div class="subteam-wrapper">
-              <div class="subteam">
+            <div className="subteam-wrapper">
+              <div className="subteam">
                 <h6>
                   Marlène Delahaye<span>Architecte DE</span>
                 </h6>
               </div>
-              <div class="subteam">
+              <div className="subteam">
                 <h6>
                   Nihed Kolsi<span>Architecte</span>
                 </h6>
               </div>
-              <div class="subteam">
+              <div className="subteam">
                 <h6>
                   Esthel Lenain<span>Architecte HMNOP</span>
                 </h6>
               </div>
-              <div class="subteam">
+              <div className="subteam">
                 <h6>
                   Cyrille Lecomte<span>Secrétaire</span>
                 </h6>
               </div>
-              <div class="subteam">
+              <div className="subteam">
                 <h6>
                   Philippe Page
                   <span>
@@ -170,7 +168,7 @@ const about = () => {
                   </span>
                 </h6>
               </div>
-              <div class="subteam">
+              <div className="subteam">
                 <h6>
                   Matthieu Sanfourche<span>Dessinateur Projeteur</span>
                 </h6>
@@ -179,11 +177,11 @@ const about = () => {
           </div>
         </section>
 
-        <section id="clients" class="clients-section">
-          <div class="clients-wrapper">
-            <h2 class="title">Nos clients</h2>
-            <div class="clients-list">
-              <ul class="client-list">
+        <section id="clients" className="clients-section">
+          <div className="clients-wrapper">
+            <h2 className="title">Nos clients</h2>
+            <div className="clients-list">
+              <ul className="client-list">
                 <li>ADSEA 17 LP</li>
                 <li>Centre Hospitalier de La Rochelle</li>
                 <li>Centre Hospitalier de Rochefort</li>
@@ -202,7 +200,7 @@ const about = () => {
                 <li>Commune de Fouras</li>
               </ul>
 
-              <ul class="client-list">
+              <ul className="client-list">
                 <li>Commune de Geay, Landrais</li>
                 <li>Commune de La Jarrie, Luchat</li>
                 <li>Commune de Le Thou</li>
@@ -220,7 +218,7 @@ const about = () => {
                 <li>Commune de Thézac</li>
               </ul>
 
-              <ul class="client-list">
+              <ul className="client-list">
                 <li>Commune de Tonnay-Charente</li>
                 <li>Conseil Général de la Charente-Maritime</li>
                 <li>Conseil Régional Poitou-Charentes</li>
@@ -238,7 +236,7 @@ const about = () => {
                 <li>Institut Médico-professionnel Tonnay-Charente</li>
               </ul>
 
-              <ul class="client-list">
+              <ul className="client-list">
                 <li>Ligue de Protection des Oiseaux</li>
                 <li>
                   Maison de Retraite La Résidence du Lac St Palais sur Mer

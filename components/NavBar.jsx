@@ -23,19 +23,21 @@ function NavBar() {
       <nav className="navbar">
         <div className="nav-container">
           <Link href="/">
-            <Image
-              onClick={() => closeMenu()}
-              src="/img/logo/logo.png"
-              alt="SDA Logo"
-              width={80}
-              height={40}
-              className="logo"
-            />
+            <a>
+              <Image
+                onClick={() => closeMenu()}
+                src="/img/logo/logo.png"
+                alt="SDA Logo"
+                width={80}
+                height={40}
+                className="logo"
+              />
+            </a>
           </Link>
 
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
-              <Link href="/" passHref className="nav-links">
+              <Link href="/" className="nav-links">
                 <a
                   onClick={() => closeMenu()}
                   className={router.pathname == "/" ? "active" : ""}
@@ -45,7 +47,7 @@ function NavBar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/projects-gallery" passHref className="nav-links">
+              <Link href="/projects-gallery" className="nav-links">
                 <a
                   onClick={() => closeMenu()}
                   className={
@@ -57,7 +59,7 @@ function NavBar() {
               </Link>
             </li>
             <li className="nav-item dropdown">
-              <Link href="/about" passHref className="nav-links">
+              <Link href="/about" className="nav-links">
                 <a
                   onClick={() => closeMenu()}
                   className={router.pathname == "/about" ? "active" : ""}
@@ -81,7 +83,7 @@ function NavBar() {
               </a>
             </li>
             <li className="nav-item">
-              <Link href="/contact" passHref className="nav-links">
+              <Link href="/contact" className="nav-links">
                 <a
                   onClick={() => closeMenu()}
                   className={router.pathname == "/contact" ? "active" : ""}
