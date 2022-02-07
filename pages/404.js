@@ -8,7 +8,7 @@ const Custom404 = () => {
     setTimeout(() => {
       router.push("/");
     }, 4000);
-  }, []);
+  });
 
   return (
     <main className="error-main">
