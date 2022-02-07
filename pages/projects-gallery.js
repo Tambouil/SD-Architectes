@@ -10,12 +10,13 @@ export async function getStaticProps() {
 
   const res = await client.getEntries({
     content_type: "projectGallery",
-    order: "sys.createdAt",
+    order: "-sys.createdAt",
   });
   return {
     props: {
       cards: res.items,
     },
+    revalidate: 60,
   };
 }
 
