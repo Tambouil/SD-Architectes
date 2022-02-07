@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./Navbar";
+import Header from "./Header";
 import Footer from "./Footer";
 import Head from "next/head";
 
@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
         <meta name="description" content="Agence d'architecture à Rochefort" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
+      <Header />
       {children}
       <Footer />
     </div>
