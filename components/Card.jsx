@@ -14,6 +14,7 @@ const Card = ({ projectGallery }) => {
                 src={"https:" + vignette.fields.file.url}
                 width={vignette.fields.file.details.image.width}
                 height={vignette.fields.file.details.image.height}
+                alt="Vignette du projet"
               />
             </div>
           </a>
@@ -30,9 +31,11 @@ const Card = ({ projectGallery }) => {
           </ul>
           <div className="btn-wrapper">
             <button className="btn_card">
-              <a href="/">
-                <span className="text">Voir le projet</span>
-              </a>
+              <Link href="/">
+                <a>
+                  <span className="text">Voir le projet</span>
+                </a>
+              </Link>
             </button>
           </div>
         </div>

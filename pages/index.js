@@ -8,7 +8,9 @@ export default function Home() {
         <meta name="description" content="Agence d'architecture à Rochefort" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>Homepage</h1>
+      <div className="home-container">
+        <h1>Homepage</h1>
+      </div>
     </div>
   );
 }

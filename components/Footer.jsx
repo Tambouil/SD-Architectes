@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -6,9 +7,11 @@ const Footer = () => {
       <footer className="sda-footer">
         <div className="footer-wrapper">
           <div className="footer-logo">
-            <a href="/">
-              <img src="./img/logo/logo-footer.png" alt="Footer logo" />
-            </a>
+            <Link href="/">
+              <a>
+                <img src="./img/logo/logo-footer.png" alt="Footer logo" />
+              </a>
+            </Link>
           </div>
 
           <div className="grid-wrapper">
@@ -26,7 +29,11 @@ const Footer = () => {
                   <a href="tel:0546995913">05 46 99 59 13</a>
                 </li>
                 <li>
-                  <a href="mailto:agence@sdarchitectes.fr" target="_blank">
+                  <a
+                    href="mailto:agence@sdarchitectes.fr"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     agence@sdarchitectes.fr
                   </a>
                 </li>
@@ -36,7 +43,9 @@ const Footer = () => {
               <ul>
                 <h4>À Propos</h4>
                 <li>
-                  <a href="/legal-notice">Mentions légales</a>
+                  <Link href="/legal-notice">
+                    <a>Mentions légales</a>
+                  </Link>
                 </li>
                 <li>© {new Date().getFullYear()} SD Architectes</li>
               </ul>
@@ -47,6 +56,7 @@ const Footer = () => {
             <a
               href="mailto:agence@sdarchitectes.fr"
               target="_blank"
+              rel="noreferrer"
               className="btn-footer"
             >
               Contactez Nous

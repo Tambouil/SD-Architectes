@@ -18,6 +18,7 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: var(--white); /* provisoire */
   scroll-behavior: smooth;
+  color: var(--black);
 }
 
 a {
