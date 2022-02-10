@@ -29,7 +29,7 @@ const gallery = ({ cards }) => {
 
         <ul className="cards">
           {cards.map((gallery) => (
-            <Card key={gallery.sys.id} projectGallery={gallery} />
+            <Card key={gallery.sys.id} gallery={gallery} />
           ))}
         </ul>
       </main>
