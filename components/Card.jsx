@@ -2,8 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const Card = ({ projectGallery }) => {
-  const { title, thumbnail, location, category } = projectGallery.fields;
+const Card = ({ gallery }) => {
+  const { title, thumbnail, location, category } = gallery.fields;
   return (
     <li className="cards__item">
       <div className="card">
