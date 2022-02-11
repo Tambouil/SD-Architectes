@@ -47,22 +47,20 @@ function NavBar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/projects-gallery" className="nav-links">
+              <Link href="/galerie" className="nav-links">
                 <a
                   onClick={() => closeMenu()}
-                  className={
-                    router.pathname == "/projects-gallery" ? "active" : ""
-                  }
+                  className={router.pathname == "/galerie" ? "active" : ""}
                 >
                   Projets
                 </a>
               </Link>
             </li>
             <li className="nav-item dropdown">
-              <Link href="/about" className="nav-links">
+              <Link href="/agence" className="nav-links">
                 <a
                   onClick={() => closeMenu()}
-                  className={router.pathname == "/about" ? "active" : ""}
+                  className={router.pathname == "/agence" ? "active" : ""}
                 >
                   Agence
                   <IconContext.Provider value={{ className: "react-dropdown" }}>
@@ -93,6 +91,7 @@ function NavBar() {
               </Link>
             </li>
           </ul>
+
           <div className="nav-icon">
             {click ? (
               <FaTimes onClick={handleClick} />

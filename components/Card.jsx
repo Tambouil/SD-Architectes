@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { FaBuilding } from "react-icons/fa";
+import { FaLocationArrow } from "react-icons/fa";
 
 const Card = ({ gallery }) => {
   const { title, thumbnail, location, category } = gallery.fields;
@@ -10,10 +12,8 @@ const Card = ({ gallery }) => {
         <Link href="/">
           <a>
             <div className="card__image">
-              <Image
+              <img
                 src={"https:" + thumbnail.fields.file.url}
-                width={thumbnail.fields.file.details.image.width}
-                height={thumbnail.fields.file.details.image.height}
                 alt="Vignette du projet"
               />
             </div>
@@ -23,9 +23,15 @@ const Card = ({ gallery }) => {
           <div className="card__title">{title}</div>
           <ul className="card__text">
             <li>
-              <i className="fas fa-map-marker-alt"></i>
+              <span>
+                <FaBuilding />
+              </span>
               {category}
-              <i className="fas fa-map-marker-alt"></i>
+            </li>
+            <li>
+              <span>
+                <FaLocationArrow />
+              </span>
               {location}
             </li>
           </ul>

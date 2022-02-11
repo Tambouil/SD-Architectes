@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "./Header";
+import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Header />
+        <Navbar />
         {children}
         <Footer />
       </div>
@@ -33,7 +33,7 @@ const Layout = ({ children }) => {
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Header />
+        <Navbar />
         {children}
       </div>
     );

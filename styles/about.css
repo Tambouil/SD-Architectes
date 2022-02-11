@@ -1,5 +1,4 @@
-/* =============================== About============================= */
-/* ======= Agency section ======= */
+/* ======= Presentation section ======= */
 main {
   width: 100%;
   background-color: var(--blue);
@@ -18,11 +17,10 @@ main {
 }
 
 .agency-wrapper .title {
-  font-size: 60px;
+  font-size: 40px;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   color: var(--black);
-  margin: 1rem 0;
   text-transform: uppercase;
   text-align: center;
 }
@@ -30,14 +28,14 @@ main {
 @media only screen and (max-width: 767px) {
   .agency-wrapper .title {
     margin-bottom: 30px;
-    font-size: 40px;
+    font-size: 35px;
   }
 }
 
 @media only screen and (max-width: 575px) {
   .agency-wrapper .title {
     margin-bottom: 20px;
-    font-size: 26px;
+    font-size: 25px;
   }
 }
 
@@ -46,8 +44,19 @@ main {
   font-family: "Poppins", sans-serif;
   line-height: 1.8;
   color: var(--black);
-  margin-bottom: 1rem;
+  margin: 1rem 0;
   font-weight: 400;
+}
+@media only screen and (max-width: 767px) {
+  .agency-wrapper .agency-content .subtitle {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .agency-wrapper .agency-content .subtitle {
+    font-size: 16px;
+  }
 }
 
 .agency-wrapper .agency-content p {
@@ -55,13 +64,24 @@ main {
   line-height: 1.8;
   color: var(--brown);
 }
+@media only screen and (max-width: 767px) {
+  .agency-wrapper .agency-content p {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .agency-wrapper .agency-content p {
+    font-size: 14px;
+  }
+}
 
 .agency-wrapper .signature {
   margin-top: 50px;
 }
 
 .agency-wrapper .signature .title-signature {
-  font-family: "Marck Script", cursive;
+  font-family: "Itim", cursive;
   margin-top: 25px;
   font-size: 14px;
   font-weight: 600;
@@ -115,6 +135,7 @@ main {
   text-align: center;
   margin-left: 0.5rem;
 }
+
 .stat-2 {
   display: flex;
   align-items: center;
@@ -131,6 +152,7 @@ main {
   text-align: center;
   margin: 0 0.5rem;
 }
+
 .stat-3 {
   display: flex;
   align-items: center;
@@ -160,19 +182,29 @@ main {
   .stat-3 p {
     line-height: 2.5rem;
   }
-  .odometer-inside {
-    text-align: center;
-  }
 }
-
-@media (max-width: 687px) {
+@media (max-width: 767px) {
   .stat-1,
   .stat-2,
   .stat-3 {
-    padding: 2rem;
+    padding: 1.2rem;
   }
-  .odometer-inside {
-    padding-top: 3px;
+  .stat-1 p,
+  .stat-2 p,
+  .stat-3 p {
+    font-size: 25px;
+  }
+}
+@media (max-width: 575px) {
+  .stat-1,
+  .stat-2,
+  .stat-3 {
+    padding: 1rem;
+  }
+  .stat-1 p,
+  .stat-2 p,
+  .stat-3 p {
+    font-size: 20px;
   }
 }
 
@@ -194,10 +226,38 @@ main {
   font-weight: 500;
   text-transform: uppercase;
 }
+@media (max-width: 992px) {
+  .environment-wrapper .title {
+    font-size: 30px;
+  }
+  .environment-wrapper {
+    padding: 3rem 2rem;
+  }
+}
+@media (max-width: 767px) {
+  .environment-wrapper .title {
+    font-size: 25px;
+  }
+}
 
 .environment-wrapper p {
   margin-top: 1rem;
   color: var(--grey);
+}
+@media (max-width: 992px) {
+  .environment-wrapper p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .environment-wrapper p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 575px) {
+  .environment-wrapper p {
+    font-size: 14px;
+  }
 }
 
 /* ======= Team section ======= */
@@ -218,6 +278,17 @@ main {
   font-weight: 500;
   text-transform: uppercase;
   margin-bottom: 2rem;
+}
+@media (max-width: 992px) {
+  .team .title {
+    font-size: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .team .title {
+    font-size: 25px;
+    margin-bottom: 1rem;
+  }
 }
 
 .team-wrapper {
@@ -403,6 +474,16 @@ main {
   margin-bottom: 2rem;
   padding: 0 2rem;
 }
+@media (max-width: 992px) {
+  .clients-wrapper .title {
+    font-size: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .clients-wrapper .title {
+    font-size: 25px;
+  }
+}
 
 .client-list {
   padding: 0 2rem;
@@ -410,6 +491,21 @@ main {
 
 .clients-wrapper ul > li {
   color: #cecac4;
+}
+@media (max-width: 992px) {
+  .clients-wrapper ul > li {
+    font-size: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .clients-wrapper ul > li {
+    font-size: 14px;
+  }
+}
+@media (max-width: 575px) {
+  .clients-wrapper ul > li {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 768px) {
