@@ -20,8 +20,7 @@ export async function getStaticProps() {
   };
 }
 
-const gallery = ({ cards }) => {
-  console.log(cards);
+const Gallery = ({ cards }) => {
   return (
     <div>
       <main className="gallery-container">
@@ -37,4 +36,4 @@ const gallery = ({ cards }) => {
   );
 };
 
-export default gallery;
+export default Gallery;

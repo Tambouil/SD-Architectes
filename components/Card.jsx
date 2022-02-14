@@ -5,16 +5,18 @@ import { FaBuilding } from "react-icons/fa";
 import { FaLocationArrow } from "react-icons/fa";
 
 const Card = ({ gallery }) => {
-  const { title, thumbnail, location, category } = gallery.fields;
+  const { title, slug, thumbnail, location, category } = gallery.fields;
   return (
     <li className="cards__item">
       <div className="card">
-        <Link href="/">
+        <Link href={"/projets/" + slug}>
           <a>
             <div className="card__image">
-              <img
+              <Image
                 src={"https:" + thumbnail.fields.file.url}
                 alt="Vignette du projet"
+                layout="fill"
+                objectFit="cover"
               />
             </div>
           </a>
@@ -37,7 +39,7 @@ const Card = ({ gallery }) => {
           </ul>
           <div className="btn-wrapper">
             <button className="btn_card">
-              <Link href="/">
+              <Link href={"/projets/" + slug}>
                 <a>
                   <span className="text">Voir le projet</span>
                 </a>
