@@ -52,17 +52,17 @@ const projectDetails = ({ gallery }) => {
   } = gallery.fields;
   return (
     <>
-      <main class="details-background">
-        <div class="project-image">
+      <main className="details-background">
+        <div className="project-image">
           <img
             src={"https:" + featuredImage.fields.file.url}
             alt="perspective"
           />
         </div>
-        <section class="details-wrapper">
-          <h1 class="details-title">{title}</h1>
-          <h2 class="details-subtitle">{subTitle}</h2>
-          <ul class="details-caption">
+        <section className="details-wrapper">
+          <h1 className="details-title">{title}</h1>
+          <h2 className="details-subtitle">{subTitle}</h2>
+          <ul className="details-caption">
             <li>
               <span>
                 <FaBuilding />
@@ -76,16 +76,16 @@ const projectDetails = ({ gallery }) => {
               {location}
             </li>
           </ul>
-          <div class="details-description">
-            <div class="text-description">
+          <div className="details-description">
+            <div className="text-description">
               {documentToReactComponents(description)}
             </div>
-            <p class="details-box">{documentToReactComponents(resume)}</p>
+            <p className="details-box">{documentToReactComponents(resume)}</p>
           </div>
         </section>
-        <section class="details-nav">
-          <div class="prev-button">
-            <button class="btn_details">
+        <section className="details-nav">
+          <div className="prev-button">
+            <button className="btn_details">
               <Link href="/">
                 <a>
                   <span>
@@ -96,8 +96,8 @@ const projectDetails = ({ gallery }) => {
               </Link>
             </button>
           </div>
-          <div class="next-button">
-            <button class="btn_details">
+          <div className="next-button">
+            <button className="btn_details">
               <Link href="/">
                 <a>
                   Suivant
