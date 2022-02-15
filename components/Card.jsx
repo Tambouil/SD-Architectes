@@ -38,13 +38,11 @@ const Card = ({ gallery }) => {
             </li>
           </ul>
           <div className="btn-wrapper">
-            <button className="btn_card">
-              <Link href={"/projets/" + slug}>
-                <a>
-                  <span className="text">Voir le projet</span>
-                </a>
-              </Link>
-            </button>
+            <Link href={"/projets/" + slug}>
+              <a className="btn_card">
+                <span className="text">Voir le projet</span>
+              </a>
+            </Link>
           </div>
         </div>
       </div>

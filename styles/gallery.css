@@ -164,3 +164,6 @@
   cursor: pointer;
   text-transform: uppercase;
 }
+.btn_card:active {
+  transform: scale(0.95);
+}

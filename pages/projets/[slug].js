@@ -4,8 +4,8 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { FaBuilding } from "react-icons/fa";
 import { FaLocationArrow } from "react-icons/fa";
 import { FaChevronLeft } from "react-icons/fa";
-import { FaChevronRight } from "react-icons/fa";
 import Link from "next/link";
+import CarouselDetails from "../../components/CarouselDetails";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -38,9 +38,16 @@ export async function getStaticProps({ params }) {
   };
 }
 
-const projectDetails = ({ gallery }) => {
-  console.log(gallery);
+const options = {
+  renderText: (text) => {
+    return text.split("\n").reduce((children, textSegment, index) => {
+      return [...children, index > 0 && <br key={index} />, textSegment];
+    }, []);
+  },
+};
 
+const projectDetails = ({ gallery }) => {
+  console.log(gallery.fields.carousel);
   const {
     featuredImage,
     title,
@@ -49,7 +56,10 @@ const projectDetails = ({ gallery }) => {
     location,
     description,
     resume,
+    carousel,
   } = gallery.fields;
+  const SLIDE_COUNT = carousel.length;
+  const slides = Array.from(Array(SLIDE_COUNT).keys());
   return (
     <>
       <main className="details-background">
@@ -78,36 +88,21 @@ const projectDetails = ({ gallery }) => {
           </ul>
           <div className="details-description">
             <div className="text-description">
-              {documentToReactComponents(description)}
+              {documentToReactComponents(description, options)}
             </div>
-            <p className="details-box">{documentToReactComponents(resume)}</p>
+            <div className="details-box">
+              {documentToReactComponents(resume)}
+            </div>
           </div>
         </section>
+        <CarouselDetails slides={slides} />
         <section className="details-nav">
-          <div className="prev-button">
-            <button className="btn_details">
-              <Link href="/">
-                <a>
-                  <span>
-                    <FaChevronLeft />
-                  </span>
-                  Précédent
-                </a>
-              </Link>
-            </button>
-          </div>
-          <div className="next-button">
-            <button className="btn_details">
-              <Link href="/">
-                <a>
-                  Suivant
-                  <span>
-                    <FaChevronRight />
-                  </span>
-                </a>
-              </Link>
-            </button>
-          </div>
+          <Link href="/galerie">
+            <a className="btn_back">
+              <FaChevronLeft />
+              <span>Retour</span>
+            </a>
+          </Link>
         </section>
       </main>
     </>
