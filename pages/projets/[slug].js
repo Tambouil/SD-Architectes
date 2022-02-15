@@ -47,7 +47,7 @@ const options = {
 };
 
 const projectDetails = ({ gallery }) => {
-  console.log(gallery.fields.carousel);
+  console.log(gallery);
   const {
     featuredImage,
     title,
@@ -58,8 +58,10 @@ const projectDetails = ({ gallery }) => {
     resume,
     carousel,
   } = gallery.fields;
+
   const SLIDE_COUNT = carousel.length;
   const slides = Array.from(Array(SLIDE_COUNT).keys());
+
   return (
     <>
       <main className="details-background">
@@ -95,7 +97,7 @@ const projectDetails = ({ gallery }) => {
             </div>
           </div>
         </section>
-        <CarouselDetails slides={slides} />
+        <CarouselDetails gallery={gallery} slides={slides} />
         <section className="details-nav">
           <Link href="/galerie">
             <a className="btn_back">

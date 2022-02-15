@@ -3,7 +3,7 @@ import { PrevButton, NextButton } from "./CarouselButtons";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
-const CarouselDetails = ({ slides, options = { loop: true } }) => {
+const CarouselDetails = ({ gallery, slides, options = { loop: true } }) => {
   const autoplay = useRef(
     Autoplay(
       { delay: 20000, stopOnInteraction: false },
@@ -39,6 +39,19 @@ const CarouselDetails = ({ slides, options = { loop: true } }) => {
     emblaApi.on("select", onSelect);
   }, [emblaApi, onSelect]);
 
+  console.log(gallery);
+
+  //   const images = gallery.fields.carousel.map((image) => (
+  //     <img
+  //       src={"https:" + image.fields.file.url}
+  //       key={gallery.sys.id}
+  //       className="image"
+  //       alt="Gallery Images"
+  //     />
+  //   ));
+  const images = gallery.fields.carousel.map((image) => image.fields.file.url);
+  console.log(images);
+
   return (
     <div className="embla">
       <div className="embla__viewport" ref={emblaRef}>
@@ -46,11 +59,7 @@ const CarouselDetails = ({ slides, options = { loop: true } }) => {
           {slides.map((index) => (
             <div className="embla__slide" key={index}>
               <div className="embla__slide__inner">
-                <img
-                  className="embla__slide__img"
-                  src="/img/project-gallery/cef.jpg"
-                  alt="Arrrrg"
-                />
+                {<img className="embla__slide__img" src="" alt="Arrrrg" />}
               </div>
             </div>
           ))}

@@ -49,6 +49,10 @@
   transform: translate(-50%, -50%);
 }
 
+.embla__slide__img {
+  max-width: 60%;
+}
+
 .embla__button {
   background-color: transparent;
   position: absolute;
