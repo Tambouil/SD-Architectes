@@ -41,15 +41,15 @@ const CarouselDetails = ({ gallery, slides, options = { loop: true } }) => {
 
   console.log(gallery);
 
-  //   const images = gallery.fields.carousel.map((image) => (
-  //     <img
-  //       src={"https:" + image.fields.file.url}
-  //       key={gallery.sys.id}
-  //       className="image"
-  //       alt="Gallery Images"
-  //     />
-  //   ));
-  const images = gallery.fields.carousel.map((image) => image.fields.file.url);
+  const images = gallery.fields.carousel.map((image) => (
+    <img
+      src={"https:" + image.fields.file.url}
+      key={gallery.sys.id}
+      className="embla__slide__img"
+      alt="Gallery Images"
+    />
+  ));
+  // const images = gallery.fields.carousel.map((image) => image.fields.file.url);
   console.log(images);
 
   return (
@@ -58,9 +58,7 @@ const CarouselDetails = ({ gallery, slides, options = { loop: true } }) => {
         <div className="embla__container">
           {slides.map((index) => (
             <div className="embla__slide" key={index}>
-              <div className="embla__slide__inner">
-                {<img className="embla__slide__img" src="" alt="Arrrrg" />}
-              </div>
+              <div className="embla__slide__inner">{images}</div>
             </div>
           ))}
         </div>
