@@ -6,6 +6,7 @@ import { FaLocationArrow } from "react-icons/fa";
 import { FaChevronLeft } from "react-icons/fa";
 import Link from "next/link";
 import CarouselDetails from "../../components/CarouselDetails";
+import Skeleton from "../../components/Skeleton";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
