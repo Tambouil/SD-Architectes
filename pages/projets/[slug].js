@@ -47,7 +47,6 @@ const options = {
 };
 
 const projectDetails = ({ gallery }) => {
-  console.log(gallery);
   const {
     featuredImage,
     title,
