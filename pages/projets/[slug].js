@@ -94,7 +94,7 @@ const projectDetails = ({ gallery }) => {
             </div>
           </div>
         </section>
-
+        <CarouselDetails gallery={gallery} />
         <section className="details-nav">
           <Link href="/galerie">
             <a className="btn_back">
