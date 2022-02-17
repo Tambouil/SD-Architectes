@@ -3,7 +3,7 @@ import { PrevButton, NextButton } from "./CarouselButtons";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
-const CarouselDetails = ({ gallery, slides, options = { loop: true } }) => {
+const CarouselDetails = ({ gallery, options = { loop: true } }) => {
   const autoplay = useRef(
     Autoplay(
       { delay: 20000, stopOnInteraction: false },
