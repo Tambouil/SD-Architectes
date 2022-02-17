@@ -59,6 +59,8 @@ const projectDetails = ({ gallery }) => {
     resume,
   } = gallery.fields;
 
+  const carousel = gallery.fields.carousel;
+
   return (
     <>
       <main className="details-background">
@@ -94,7 +96,7 @@ const projectDetails = ({ gallery }) => {
             </div>
           </div>
         </section>
-        <CarouselDetails gallery={gallery} />
+        {!carousel ? null : <CarouselDetails gallery={gallery} />}
         <section className="details-nav">
           <Link href="/galerie">
             <a className="btn_back">
