@@ -43,7 +43,7 @@ const Footer = () => {
               <ul>
                 <h4>À Propos</h4>
                 <li>
-                  <Link href="/legal-notice">
+                  <Link href="/mentions-legales">
                     <a>Mentions légales</a>
                   </Link>
                 </li>

@@ -35,6 +35,16 @@ export async function getStaticProps({ params }) {
     content_type: "gallery",
     "fields.slug": params.slug,
   });
+
+  if (!items.length) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    };
+  }
+
   return {
     props: { gallery: items[0] },
     revalidate: 60,

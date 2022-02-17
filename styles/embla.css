@@ -31,7 +31,7 @@
 }
 
 .embla__slide__img {
-  height: auto;
+  height: 700px;
   max-width: 100%;
   background-position: center center;
   background-repeat: no-repeat;
@@ -68,14 +68,15 @@
 }
 
 .embla__button {
-  background-color: transparent;
+  background-color: var(--black);
+  border-radius: 50%;
   position: absolute;
   z-index: 1;
   top: 50%;
   transform: translateY(-50%);
   border: 0;
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   justify-content: center;
   align-items: center;
   padding: 0;
@@ -83,7 +84,7 @@
 
 .embla__button:not(:disabled) {
   cursor: pointer;
-  fill: #1bcacd;
+  fill: var(--white);
 }
 
 .embla__button:disabled {
@@ -91,8 +92,8 @@
 }
 
 .embla__button__svg {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 .embla__button--prev {
@@ -101,6 +102,12 @@
 
 .embla__button--next {
   right: 0.7rem;
+}
+
+@media only screen and (max-width: 992px) {
+  .embla__button {
+    display: none;
+  }
 }
 
 .embla__dots {
