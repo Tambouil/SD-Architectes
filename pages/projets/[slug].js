@@ -56,11 +56,7 @@ const projectDetails = ({ gallery }) => {
     location,
     description,
     resume,
-    carousel,
   } = gallery.fields;
-
-  const SLIDE_COUNT = carousel.length;
-  const slides = Array.from(Array(SLIDE_COUNT).keys());
 
   return (
     <>
@@ -97,7 +93,7 @@ const projectDetails = ({ gallery }) => {
             </div>
           </div>
         </section>
-        <CarouselDetails gallery={gallery} slides={slides} />
+        <CarouselDetails gallery={gallery} />
         <section className="details-nav">
           <Link href="/galerie">
             <a className="btn_back">

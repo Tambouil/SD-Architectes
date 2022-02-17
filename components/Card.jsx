@@ -6,6 +6,7 @@ import { FaLocationArrow } from "react-icons/fa";
 
 const Card = ({ gallery }) => {
   const { title, slug, thumbnail, location, category } = gallery.fields;
+
   return (
     <li className="cards__item">
       <div className="card">

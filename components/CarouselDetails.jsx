@@ -39,26 +39,18 @@ const CarouselDetails = ({ gallery, slides, options = { loop: true } }) => {
     emblaApi.on("select", onSelect);
   }, [emblaApi, onSelect]);
 
-  console.log(gallery);
-
-  const images = gallery.fields.carousel.map((image) => (
-    <img
-      src={"https:" + image.fields.file.url}
-      key={gallery.sys.id}
-      className="embla__slide__img"
-      alt="Gallery Images"
-    />
-  ));
-  // const images = gallery.fields.carousel.map((image) => image.fields.file.url);
-  console.log(images);
-
   return (
     <div className="embla">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          {slides.map((index) => (
-            <div className="embla__slide" key={index}>
-              <div className="embla__slide__inner">{images}</div>
+          {gallery.fields.carousel.map((image) => (
+            <div className="embla__slide" key={image.sys.id}>
+              <div className="embla__slide__img">
+                <img
+                  src={"https:" + image.fields.file.url}
+                  alt="Vignette du projet"
+                />
+              </div>
             </div>
           ))}
         </div>

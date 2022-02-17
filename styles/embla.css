@@ -1,5 +1,7 @@
 .embla {
   position: relative;
+  max-width: 1440px;
+  margin: auto;
 }
 
 .embla__viewport {
@@ -26,31 +28,43 @@
   width: 80%;
   position: relative;
   padding-left: 1rem;
-  counter-increment: embla;
-}
-
-.embla__slide__inner {
-  background-color: rgb(40, 44, 52);
-  position: relative;
-  border-radius: 0.5rem;
-  min-height: 200px;
-  padding-bottom: 46%;
-  font-size: 5rem;
-}
-
-.embla__slide__inner:before {
-  color: white;
-  font-weight: 300;
-  line-height: 1;
-  content: counter(embla);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .embla__slide__img {
-  max-width: 20%;
+  height: auto;
+  max-width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+  object-fit: cover;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .embla__slide__img {
+    height: 600px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .embla__slide__img {
+    height: 500px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .embla__slide__img {
+    height: 400px;
+  }
+}
+
+.embla__slide__img img {
+  height: 100%;
+  width: 100%;
+  vertical-align: middle;
+  object-fit: cover;
 }
 
 .embla__button {
