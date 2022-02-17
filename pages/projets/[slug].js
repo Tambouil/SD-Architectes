@@ -22,10 +22,9 @@ export const getStaticPaths = async () => {
       params: { slug: item.fields.slug },
     };
   });
-
   return {
     paths,
-    fallback: true,
+    fallback: false,
   };
 };
 
