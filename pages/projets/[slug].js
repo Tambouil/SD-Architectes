@@ -25,7 +25,7 @@ export const getStaticPaths = async () => {
 
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 };
 
@@ -49,6 +49,8 @@ const options = {
 };
 
 const projectDetails = ({ gallery }) => {
+  if (!gallery) return <Skeleton />;
+
   const {
     featuredImage,
     title,
