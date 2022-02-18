@@ -1,11 +1,9 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
-import { PrevButton, NextButton } from "./CarouselButtons";
+import { PrevButtonHome, NextButtonHome } from "./CarouselButtonsHome";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
 const CarouselHome = ({ carousel, options = { loop: true } }) => {
-  console.log(carousel);
-
   const autoplay = useRef(
     Autoplay(
       { delay: 20000, stopOnInteraction: false },
@@ -45,20 +43,22 @@ const CarouselHome = ({ carousel, options = { loop: true } }) => {
     <div className="embla-home">
       <div className="embla__viewport-home" ref={emblaRef}>
         <div className="embla__container-home">
-          {carousel.cards.map((image) => (
-            <div className="embla__slide-home" key={image.sys.id}>
-              <div className="embla__slide__img-home">
-                <img
-                  src={"https:" + image.fields.featuredImage.fields.file.url}
-                  alt="Vignette du projet"
-                />
+          {carousel.cards
+            .filter((image) => image.fields.carouselHome)
+            .map((image) => (
+              <div className="embla__slide-home" key={image.sys.id}>
+                <div className="embla__slide__img-home">
+                  <img
+                    src={"https:" + image.fields.carouselHome.fields.file.url}
+                    alt="Image d'acceuil"
+                  />
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
         </div>
       </div>
-      <PrevButton onClick={scrollPrev} enabled={prevBtnEnabled} />
-      <NextButton onClick={scrollNext} enabled={nextBtnEnabled} />
+      <PrevButtonHome onClick={scrollPrev} enabled={prevBtnEnabled} />
+      <NextButtonHome onClick={scrollNext} enabled={nextBtnEnabled} />
     </div>
   );
 };

@@ -1,37 +1,36 @@
-.embla {
+.embla-home {
   position: relative;
-  max-width: 1440px;
   margin: auto;
 }
 
-.embla__viewport {
+.embla__viewport-home {
   overflow: hidden;
 }
 
-.embla__viewport.is-draggable {
+.embla__viewport-home.is-draggable {
   cursor: move;
   cursor: grab;
 }
 
-.embla__viewport.is-dragging {
+.embla__viewport-home.is-dragging {
   cursor: grabbing;
 }
 
-.embla__container {
+.embla__container-home {
   display: flex;
   will-change: transform;
   margin-left: -1rem;
 }
 
-.embla__slide {
+.embla__slide-home {
   flex: 0 0 auto;
-  width: 80%;
+  width: 100%;
   position: relative;
   padding-left: 1rem;
 }
 
-.embla__slide__img {
-  height: 700px;
+.embla__slide__img-home {
+  height: 100vh;
   max-width: 100%;
   background-position: center center;
   background-repeat: no-repeat;
@@ -43,69 +42,62 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .embla__slide__img {
+  .embla__slide__img-home {
     height: 600px;
   }
 }
 
 @media only screen and (max-width: 767px) {
-  .embla__slide__img {
+  .embla__slide__img-home {
     height: 500px;
   }
 }
 
 @media only screen and (max-width: 575px) {
-  .embla__slide__img {
+  .embla__slide__img-home {
     height: 400px;
   }
 }
 
-.embla__slide__img img {
+.embla__slide__img-home img {
   height: 100%;
   width: 100%;
   vertical-align: middle;
   object-fit: cover;
 }
 
-.embla__button {
+.embla__button-home {
   background-color: var(--black);
   border-radius: 50%;
   position: absolute;
-  z-index: 1;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: 7%;
+  right: 12%;
   border: 0;
   width: 4rem;
   height: 4rem;
-  justify-content: center;
-  align-items: center;
   padding: 0;
 }
 
-.embla__button:not(:disabled) {
+.embla__button-home:not(:disabled) {
   cursor: pointer;
   fill: var(--white);
 }
 
-.embla__button:disabled {
+.embla__button-home:disabled {
   fill: #e9e9e9;
 }
 
-.embla__button__svg {
+.embla__button__svg-home {
   width: 1.2rem;
   height: 1.2rem;
 }
 
-.embla__button--prev {
-  left: 0.7rem;
-}
-
-.embla__button--next {
-  right: 0.7rem;
+.embla__button--next-home {
+  right: 8rem;
 }
 
 @media only screen and (max-width: 992px) {
-  .embla__button {
+  .embla__button-home {
     display: none;
   }
 }
