@@ -1,4 +1,3 @@
-import React from "react";
 import { createClient } from "contentful";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { FaBuilding } from "react-icons/fa";

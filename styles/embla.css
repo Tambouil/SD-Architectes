@@ -1,37 +1,36 @@
-.embla {
+.embla-home {
   position: relative;
-  max-width: 1440px;
   margin: auto;
 }
 
-.embla__viewport {
+.embla__viewport-home {
   overflow: hidden;
 }
 
-.embla__viewport.is-draggable {
+.embla__viewport-home.is-draggable {
   cursor: move;
   cursor: grab;
 }
 
-.embla__viewport.is-dragging {
+.embla__viewport-home.is-dragging {
   cursor: grabbing;
 }
 
-.embla__container {
+.embla__container-home {
   display: flex;
   will-change: transform;
   margin-left: -1rem;
 }
 
-.embla__slide {
+.embla__slide-home {
   flex: 0 0 auto;
-  width: 80%;
+  width: 100%;
   position: relative;
   padding-left: 1rem;
 }
 
-.embla__slide__img {
-  height: 700px;
+.embla__slide__img-home {
+  height: 100vh;
   max-width: 100%;
   background-position: center center;
   background-repeat: no-repeat;
@@ -43,24 +42,24 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .embla__slide__img {
+  .embla__slide__img-home {
     height: 600px;
   }
 }
 
 @media only screen and (max-width: 767px) {
-  .embla__slide__img {
+  .embla__slide__img-home {
     height: 500px;
   }
 }
 
 @media only screen and (max-width: 575px) {
-  .embla__slide__img {
+  .embla__slide__img-home {
     height: 400px;
   }
 }
 
-.embla__slide__img img {
+.embla__slide__img-home img {
   height: 100%;
   width: 100%;
   vertical-align: middle;
