@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback, useRef } from "react";
 import { PrevButtonHome, NextButtonHome } from "./CarouselButtonsHome";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
+import Link from "next/link";
 
 const CarouselHome = ({ carousel, options = { loop: true } }) => {
   const autoplay = useRef(
@@ -43,7 +44,7 @@ const CarouselHome = ({ carousel, options = { loop: true } }) => {
     <div className="embla-home">
       <div className="embla__viewport-home" ref={emblaRef}>
         <div className="embla__container-home">
-          {carousel.cards
+          {carousel
             .filter((image) => image.fields.carouselHome)
             .map((image) => (
               <div className="embla__slide-home" key={image.sys.id}>
@@ -52,6 +53,15 @@ const CarouselHome = ({ carousel, options = { loop: true } }) => {
                     src={"https:" + image.fields.carouselHome.fields.file.url}
                     alt="Image d'acceuil"
                   />
+                </div>
+                {console.log(image.fields.slug)}
+                <div className="btn-home" key={image.sys.id}>
+                  <button>
+                    <Link href={"projets/" + image.fields.slug}>
+                      <a>test</a>
+                    </Link>
+                  </button>
+                  <p className="presentation">paragraphe</p>
                 </div>
               </div>
             ))}

@@ -67,15 +67,24 @@
 }
 
 .embla__button-home {
-  background-color: var(--black);
-  border-radius: 50%;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 100%;
   position: absolute;
-  bottom: 7%;
-  right: 12%;
-  border: 0;
-  width: 4rem;
-  height: 4rem;
+  bottom: 8%;
+  right: 15%;
+  width: 2.5rem;
+  height: 2.5rem;
   padding: 0;
+  z-index: 1;
+  transition: all 0.2s ease-in-out;
+  transform: scale(1);
+}
+.embla__button-home:hover {
+  transform: scale(0.9);
+  background: transparent;
+  border: 1px solid #cdddac;
+  color: #cdddac;
 }
 
 .embla__button-home:not(:disabled) {
@@ -88,12 +97,15 @@
 }
 
 .embla__button__svg-home {
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 0.5rem;
+  height: 0.5rem;
 }
 
+.embla__button--prev-home {
+  right: 15rem;
+}
 .embla__button--next-home {
-  right: 8rem;
+  right: 12rem;
 }
 
 @media only screen and (max-width: 992px) {
@@ -143,4 +155,15 @@
 .autoplay {
   margin-top: 40px;
   margin-left: 20px;
+}
+
+.presentation {
+  position: absolute;
+  bottom: 250px;
+  right: 50%;
+}
+.btn-home {
+  position: absolute;
+  bottom: 7%;
+  right: 50%;
 }
