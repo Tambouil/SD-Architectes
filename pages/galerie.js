@@ -22,7 +22,7 @@ export async function getStaticProps() {
 
 const Gallery = ({ cards }) => {
   return (
-    <div>
+    <div className="sda-container">
       <main className="gallery-container">
         <h1 className="projects_title">Nos projets</h1>
 

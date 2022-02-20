@@ -2,7 +2,7 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div>
+    <div className="sda-container">
       <main className="contact-container">
         <section className="contact-content-wrapper">
           <div className="contact-info-boxed">

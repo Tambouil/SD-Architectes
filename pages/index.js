@@ -9,7 +9,6 @@ export async function getStaticProps() {
 
   const res = await client.getEntries({
     content_type: "gallery",
-    order: "-sys.createdAt",
   });
   return {
     props: {

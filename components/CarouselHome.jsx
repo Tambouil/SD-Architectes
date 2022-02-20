@@ -54,14 +54,26 @@ const CarouselHome = ({ carousel, options = { loop: true } }) => {
                     alt="Image d'acceuil"
                   />
                 </div>
-                {console.log(image.fields.slug)}
-                <div className="btn-home" key={image.sys.id}>
-                  <button>
-                    <Link href={"projets/" + image.fields.slug}>
-                      <a>test</a>
-                    </Link>
-                  </button>
-                  <p className="presentation">paragraphe</p>
+                <div className="v-bottom">
+                  <div className="bottom-container">
+                    <div className="presentation">
+                      <h1>SD Architectes</h1>
+                      <p>
+                        Nous sommes une agence d’architecture polyvalente qui,
+                        depuis plus de 20 ans, cultive sa curiosité pour chaque
+                        jour se réinventer. Nous allions savoir-faire, maîtrise
+                        technique et culture diversifiée pour donner vie aux
+                        projets de nos clients.
+                      </p>
+                    </div>
+                    <div className="btn-home">
+                      <Link href={"/projets/" + image.fields.slug}>
+                        <a>
+                          <span>Voir le projet</span>
+                        </a>
+                      </Link>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}

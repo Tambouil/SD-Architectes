@@ -145,7 +145,7 @@
 .map-container {
   max-width: 1440px;
   margin: 0 auto;
-  margin-bottom: 6rem;
+  padding-bottom: 6rem;
 }
 .google-map-area .contact-map {
   width: 100%;
