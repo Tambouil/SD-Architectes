@@ -1,6 +1,12 @@
 export default async function handler(req, res) {
   try {
-    await res.unstable_revalidate("/contact", "/agence");
+    await res.unstable_revalidate(
+      "/",
+      "/galerie",
+      "/projets/[slug]",
+      "/agence",
+      "/contact"
+    );
     return res.json({ revalidated: true });
   } catch (err) {
     // If there was an error, Next.js will continue

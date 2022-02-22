@@ -47,7 +47,6 @@ export async function getStaticProps({ params }) {
 
   return {
     props: { gallery: items[0] },
-    revalidate: 60,
   };
 }
 

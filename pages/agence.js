@@ -38,7 +38,6 @@ export async function getStaticProps() {
       team: team.items,
       clients: clients.items,
     },
-    revalidate: 60,
   };
 }
 
