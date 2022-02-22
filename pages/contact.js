@@ -1,31 +1,33 @@
-import React from "react";
+import { createClient } from "contentful";
+import ContactInfos from "../components/ContactInfos";
 
-const Contact = () => {
+export async function getStaticProps() {
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_KEY,
+  });
+
+  const res = await client.getEntries({
+    content_type: "contact",
+  });
+
+  return {
+    props: {
+      contactInfo: res.items,
+    },
+    revalidate: 60,
+  };
+}
+
+const Contact = ({ contactInfo }) => {
   return (
     <div className="sda-container">
       <main className="contact-container">
         <section className="contact-content-wrapper">
           <div className="contact-info-boxed">
-            <div className="inner-content">
-              <h1 className="title">SD Architectes</h1>
-              <span className="text">32 Rue Thiers 17300 Rochefort S/ Mer</span>
-              <span className="email">
-                Email:
-                <a
-                  href="mailto:agence@sdarchitectes.fr"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  agence@sdarchitectes.fr
-                </a>
-              </span>
-            </div>
-            <div className="inner-info">
-              <p className="call">Téléphone</p>
-              <span className="call">
-                <a href="tel:0546995913">05 46 99 59 13</a>
-              </span>
-            </div>
+            {contactInfo.map((contact) => (
+              <ContactInfos key={contact.sys.id} contact={contact} />
+            ))}
           </div>
         </section>
 
