@@ -6,6 +6,7 @@ import { FaChevronLeft } from "react-icons/fa";
 import Link from "next/link";
 import CarouselDetails from "../../components/CarouselDetails";
 import Skeleton from "../../components/Skeleton";
+import Meta from "../../components/Meta";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -75,6 +76,7 @@ const projectDetails = ({ gallery }) => {
 
   return (
     <>
+      <Meta title={"SD Architectes | " + title} />
       <main className="details-background">
         <div className="project-image">
           <img

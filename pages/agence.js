@@ -4,6 +4,7 @@ import Associates from "../components/Associates";
 import Clients from "../components/Clients";
 import Environment from "../components/Environment";
 import Team from "../components/Team";
+import Meta from "../components/Meta";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -44,6 +45,7 @@ export async function getStaticProps() {
 const About = ({ agency, agencyEnv, associates, team, clients }) => {
   return (
     <div>
+      <Meta title="SD Architectes | Agence" />
       <main>
         {agency.map((agency) => (
           <Agency key={agency.sys.id} agency={agency} />

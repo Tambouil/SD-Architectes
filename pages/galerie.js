@@ -1,6 +1,7 @@
 import React from "react";
 import { createClient } from "contentful";
 import Card from "../components/Card";
+import Meta from "../components/Meta";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -22,17 +23,20 @@ export async function getStaticProps() {
 
 const Gallery = ({ cards }) => {
   return (
-    <div className="sda-container">
-      <main className="gallery-container">
-        <h1 className="projects_title">Nos projets</h1>
+    <>
+      <Meta title="SD Architectes | Nos projets" />
+      <div className="sda-container">
+        <main className="gallery-container">
+          <h1 className="projects_title">Nos projets</h1>
 
-        <ul className="cards">
-          {cards.map((gallery) => (
-            <Card key={gallery.sys.id} gallery={gallery} />
-          ))}
-        </ul>
-      </main>
-    </div>
+          <ul className="cards">
+            {cards.map((gallery) => (
+              <Card key={gallery.sys.id} gallery={gallery} />
+            ))}
+          </ul>
+        </main>
+      </div>
+    </>
   );
 };
 
