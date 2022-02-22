@@ -58,13 +58,7 @@ const CarouselHome = ({ carousel, options = { loop: true } }) => {
                   <div className="bottom-container">
                     <div className="presentation">
                       <h1>SD Architectes</h1>
-                      <p>
-                        Nous sommes une agence d’architecture polyvalente qui,
-                        depuis plus de 20 ans, cultive sa curiosité pour chaque
-                        jour se réinventer. Nous allions savoir-faire, maîtrise
-                        technique et culture diversifiée pour donner vie aux
-                        projets de nos clients.
-                      </p>
+                      <p>{image.fields.speach}</p>
                     </div>
                     <div className="btn-home">
                       <Link href={"/projets/" + image.fields.slug}>

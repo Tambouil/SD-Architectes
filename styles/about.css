@@ -44,7 +44,7 @@ main {
   font-family: "Poppins", sans-serif;
   line-height: 1.8;
   color: var(--black);
-  margin: 1rem 0;
+  margin-top: 1rem;
   font-weight: 400;
 }
 @media only screen and (max-width: 767px) {
@@ -63,6 +63,7 @@ main {
   font-size: 16px;
   line-height: 1.8;
   color: var(--brown);
+  padding: 0.5rem 0;
 }
 @media only screen and (max-width: 767px) {
   .agency-wrapper .agency-content p {
@@ -338,13 +339,12 @@ main {
   text-align: center;
   margin-bottom: 2rem;
 }
-.content ul > li {
-  list-style: inside;
+.skills ul > li {
   color: var(--white);
   font-weight: 400;
   margin: 0 auto;
 }
-.content ul > li:first-child {
+.skills ul > li:first-child {
   list-style: none;
   color: #ededdd;
   font-size: 18px;
@@ -368,7 +368,7 @@ main {
 }
 
 @media (max-width: 991px) {
-  .content ul > li {
+  .skills {
     display: none;
   }
 }
@@ -464,6 +464,8 @@ main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
+  padding: 0 2rem;
+  color: #cecac4;
 }
 
 .clients-wrapper .title {
@@ -485,31 +487,14 @@ main {
   }
 }
 
-.client-list {
-  padding: 0 2rem;
-}
-
-.clients-wrapper ul > li {
-  color: #cecac4;
-}
 @media (max-width: 992px) {
-  .clients-wrapper ul > li {
+  .clients-list {
     font-size: 15px;
   }
 }
 @media (max-width: 767px) {
-  .clients-wrapper ul > li {
-    font-size: 14px;
-  }
-}
-@media (max-width: 575px) {
-  .clients-wrapper ul > li {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 768px) {
   .clients-list {
+    font-size: 14px;
     grid-template-columns: 1fr;
   }
 }
