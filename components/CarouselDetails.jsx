@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 // import required modules
-import { Autoplay, Navigation, Pagination } from "swiper";
+import { Autoplay, Navigation } from "swiper";
 
 const CarouselDetails = ({ gallery }) => {
   return (
@@ -20,7 +20,6 @@ const CarouselDetails = ({ gallery }) => {
       }}
       autoHeight={true}
       loop={true}
-      spaceBetween={20}
       navigation={true}
       modules={[Autoplay, Navigation]}
       className="mySwiper"
