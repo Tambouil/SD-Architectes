@@ -1,23 +1,19 @@
 .swiper {
   width: 75%;
   max-width: 1440px;
-  height: auto;
+  height: 700px;
   margin: 0 auto;
 }
 
-.swiper-slide {
-  height: auto;
-}
-
 .swiper .swiper-slide {
-  height: 500px;
-  line-height: 500px;
+  height: 700px;
+  line-height: 700px;
 }
 .swiper .swiper-slide img {
   height: 100%;
   width: 100%;
   vertical-align: middle;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 0.5rem;
 }
 .swiper-button-next,

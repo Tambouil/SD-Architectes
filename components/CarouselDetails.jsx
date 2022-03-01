@@ -15,10 +15,10 @@ const CarouselDetails = ({ gallery }) => {
       slidesPerView={1}
       spaceBetween={30}
       autoplay={{
-        delay: 5000,
+        delay: 3500,
         disableOnInteraction: false,
       }}
-      autoHeight={true}
+      autoHeight={false}
       loop={true}
       navigation={true}
       modules={[Autoplay, Navigation]}

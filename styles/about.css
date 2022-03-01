@@ -420,11 +420,31 @@ main {
   border-radius: 10px;
   box-shadow: 0 20px 40px -14px rgb(0 0 0 / 25%);
   padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 @media (max-width: 1030px) {
   .subteam {
     padding: 2rem;
   }
+}
+
+.subteam img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  border: 3px solid #ededdd;
+  margin-bottom: 1rem;
+  padding: 4px;
+  -webkit-filter: grayscale(
+    100%
+  ); /* Pour les navigateurs Chrome, Safari, Opera */
+  filter: grayscale(100%); /* Firefox */
 }
 
 .subteam h6 {
