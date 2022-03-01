@@ -7,7 +7,7 @@ import Link from "next/link";
 const CarouselHome = ({ carousel, options = { loop: true } }) => {
   const autoplay = useRef(
     Autoplay(
-      { delay: 20000, stopOnInteraction: false },
+      { delay: 5000, stopOnInteraction: false },
       (emblaRoot) => emblaRoot.parentElement
     )
   );

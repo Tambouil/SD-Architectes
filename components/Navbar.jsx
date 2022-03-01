@@ -68,7 +68,7 @@ function NavBar() {
                   </IconContext.Provider>
                 </a>
               </Link>
-              <Dropdown />
+              <Dropdown closeMenu={closeMenu} />
             </li>
             <li className="nav-item">
               <a

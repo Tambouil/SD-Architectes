@@ -1,17 +1,17 @@
-import React from "react";
 import Link from "next/link";
-const Dropdown = () => {
+
+const Dropdown = ({ closeMenu }) => {
   return (
     <div>
       <ul className="dropdown-menu">
         <li className="dropdown-item">
           <Link href="/agence#team" className="nav-link">
-            <a>Notre équipe</a>
+            <a onClick={() => closeMenu()}>Notre équipe</a>
           </Link>
         </li>
         <li className="dropdown-item">
           <Link href="/agence#clients" className="nav-link">
-            <a>Nos clients</a>
+            <a onClick={() => closeMenu()}>Nos clients</a>
           </Link>
         </li>
       </ul>
