@@ -1,6 +1,5 @@
 /* ======= Google fonts ======= */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Marck+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
 
 :root {
@@ -10,7 +9,6 @@
   --brown: #544239;
   --black: #15161a;
   --white: rgb(238, 238, 238);
-  --swiper-navigation-color: rgb(238, 238, 238);
 }
 
 html,
