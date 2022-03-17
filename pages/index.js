@@ -8,7 +8,7 @@ export async function getStaticProps() {
   });
 
   const res = await client.getEntries({
-    content_type: "gallery",
+    content_type: "home",
   });
   return {
     props: {

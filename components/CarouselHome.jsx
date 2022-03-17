@@ -44,33 +44,31 @@ const CarouselHome = ({ carousel, options = { loop: true } }) => {
     <div className="embla-home">
       <div className="embla__viewport-home" ref={emblaRef}>
         <div className="embla__container-home">
-          {carousel
-            .filter((image) => image.fields.carouselHome)
-            .map((image) => (
-              <div className="embla__slide-home" key={image.sys.id}>
-                <div className="embla__slide__img-home">
-                  <img
-                    src={"https:" + image.fields.carouselHome.fields.file.url}
-                    alt="Image d'acceuil"
-                  />
-                </div>
-                <div className="v-bottom">
-                  <div className="bottom-container">
-                    <div className="presentation">
-                      <h1>SD Architectes</h1>
-                      <p>{image.fields.speach}</p>
-                    </div>
-                    <div className="btn-home">
-                      <Link href={"/projets/" + image.fields.slug}>
-                        <a>
-                          <span>Voir le projet</span>
-                        </a>
-                      </Link>
-                    </div>
+          {carousel.map((image) => (
+            <div className="embla__slide-home" key={image.sys.id}>
+              <div className="embla__slide__img-home">
+                <img
+                  src={"https:" + image.fields.homeImg.fields.file.url}
+                  alt="Image d'acceuil"
+                />
+              </div>
+              <div className="v-bottom">
+                <div className="bottom-container">
+                  <div className="presentation">
+                    <h1>SD Architectes</h1>
+                    <p>{image.fields.speach}</p>
+                  </div>
+                  <div className="btn-home">
+                    <Link href={"/projets/" + image.fields.slug}>
+                      <a>
+                        <span>Voir le projet</span>
+                      </a>
+                    </Link>
                   </div>
                 </div>
               </div>
-            ))}
+            </div>
+          ))}
         </div>
       </div>
       <PrevButtonHome onClick={scrollPrev} enabled={prevBtnEnabled} />
