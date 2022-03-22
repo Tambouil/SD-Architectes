@@ -9,6 +9,7 @@ export async function getStaticProps() {
 
   const res = await client.getEntries({
     content_type: "home",
+    order: "-sys.createdAt",
   });
   return {
     props: {
