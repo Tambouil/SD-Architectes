@@ -1,4 +1,3 @@
-/* ======= Presentation section ======= */
 main {
   width: 100%;
   background-color: var(--blue);
@@ -97,7 +96,6 @@ main {
   text-transform: uppercase;
 }
 
-/* ======= Stats section ======= */
 .agency-stats {
   margin-top: 5rem;
   display: flex;
@@ -107,7 +105,9 @@ main {
   border-top: 1px solid var(--brown);
 }
 
-.stat-1 {
+.stat-1,
+.stat-2,
+.stat-3 {
   display: flex;
   align-items: center;
   padding: 4rem 2rem;
@@ -123,29 +123,8 @@ main {
   text-align: center;
   margin-left: 0.5rem;
 }
-
-.stat-2 {
-  display: flex;
-  align-items: center;
-  padding: 4rem 2rem;
-}
 .stat-2,
-.stat-2 p {
-  font-size: 35px;
-  font-weight: 500;
-  color: var(--brown);
-  margin-bottom: 0;
-}
-.stat-2 p {
-  text-align: center;
-  margin: 0 0.5rem;
-}
-
-.stat-3 {
-  display: flex;
-  align-items: center;
-  padding: 4rem 2rem;
-}
+.stat-2 p,
 .stat-3,
 .stat-3 p {
   font-size: 35px;
@@ -153,6 +132,7 @@ main {
   color: var(--brown);
   margin-bottom: 0;
 }
+.stat-2 p,
 .stat-3 p {
   text-align: center;
   margin: 0 0.5rem;
@@ -196,7 +176,6 @@ main {
   }
 }
 
-/* ======= Environment section ======= */
 .environment {
   width: 100%;
   background-color: var(--blue);
@@ -242,13 +221,7 @@ main {
     font-size: 14px;
   }
 }
-@media (max-width: 575px) {
-  .environment-wrapper p {
-    font-size: 14px;
-  }
-}
 
-/* ======= Team section ======= */
 .team-section {
   width: 100%;
   background-color: #f0f0f0;
@@ -349,9 +322,6 @@ main {
     margin-bottom: 0;
     margin-top: 1rem;
   }
-  p {
-    margin-bottom: 0;
-  }
 }
 
 @media (max-width: 991px) {
@@ -360,7 +330,8 @@ main {
   }
 }
 
-.associate-1 {
+.associate-1,
+.associate-2 {
   background: linear-gradient(45deg, #134e5e 0%, #71b280 100%);
   border-radius: 10px;
   box-shadow: 0 20px 40px -14px rgb(0 0 0 / 25%);
@@ -374,11 +345,6 @@ main {
   border: 3px solid #ededdd;
   margin-bottom: 1rem;
   padding: 4px;
-}
-.associate-2 {
-  background: linear-gradient(45deg, #134e5e 0%, #71b280 100%);
-  border-radius: 10px;
-  box-shadow: 0 20px 40px -14px rgb(0 0 0 / 25%);
 }
 
 .subteam-wrapper {
@@ -428,10 +394,8 @@ main {
   border: 3px solid #ededdd;
   margin-bottom: 1rem;
   padding: 4px;
-  -webkit-filter: grayscale(
-    100%
-  ); /* Pour les navigateurs Chrome, Safari, Opera */
-  filter: grayscale(100%); /* Firefox */
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
 .subteam h6 {
@@ -454,7 +418,6 @@ main {
   color: #eee9e9;
 }
 
-/* ======= Clients section ======= */
 .clients-section {
   width: 100%;
   background-color: #262d3c;
